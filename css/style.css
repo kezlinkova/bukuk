@@ -1,0 +1,961 @@
+/* ============================================
+   BUKUK.CZ - Hlavní styly
+   ============================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* ============================================
+   CSS Proměnné
+   ============================================ */
+:root {
+    /* Barvy */
+    --color-bg: #F2F1EC;
+    --color-primary: #4B6390;
+    --color-secondary: #5D6D7E;
+    --color-accent: #CCA26A;
+    --color-accent-dark: #841404;
+
+    /* Typografie */
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Velikosti */
+    --text-base: 1.125rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+
+    /* Řádkování */
+    --leading-normal: 1.6;
+    --leading-relaxed: 1.8;
+
+    /* Mezery */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 5rem;
+    --space-3xl: 8rem;
+
+    /* Maximální šířka */
+    --max-width: 1200px;
+    --max-width-text: 720px;
+
+    /* Přechody */
+    --transition: 0.3s ease;
+}
+
+/* ============================================
+   Reset & Základy
+   ============================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* ============================================
+   Typografie
+   ============================================ */
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-primary);
+}
+
+h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-md);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-md);
+}
+
+h3 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-sm);
+}
+
+h4 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+}
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+.lead {
+    font-size: var(--text-lg);
+    color: var(--color-secondary);
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.container--narrow {
+    max-width: var(--max-width-text);
+}
+
+section {
+    padding: var(--space-3xl) 0;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+.header {
+    background-color: white;
+    padding: var(--space-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.header__logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.header__claim {
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header__claim {
+        display: block;
+    }
+}
+
+/* Navigace */
+.nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: var(--space-lg);
+    }
+}
+
+.nav__link {
+    font-size: 0.9375rem;
+    color: var(--color-primary);
+    position: relative;
+}
+
+.nav__link:hover,
+.nav__link--active {
+    color: var(--color-accent);
+}
+
+.nav__link--active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent-dark);
+}
+
+/* Mobilní menu tlačítko */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobilní menu */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg);
+    padding: var(--space-md);
+    border-top: 1px solid var(--color-secondary);
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none !important;
+    }
+}
+
+.mobile-nav__link {
+    display: block;
+    padding: var(--space-sm) 0;
+    font-size: var(--text-base);
+    border-bottom: 1px solid rgba(159, 170, 190, 0.3);
+}
+
+.mobile-nav__link:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   Hero sekce
+   ============================================ */
+.hero {
+    padding: var(--space-3xl) 0;
+}
+
+.hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .hero__inner {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--space-3xl);
+    }
+}
+
+.hero__logo {
+    flex-shrink: 0;
+}
+
+.hero__logo img {
+    width: 250px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .hero__logo img {
+        width: 350px;
+    }
+}
+
+.hero__content {
+    max-width: var(--max-width-text);
+}
+
+.hero h1 {
+    margin-bottom: var(--space-md);
+}
+
+.hero__subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-xl);
+}
+
+.hero__cta {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .hero__cta {
+        justify-content: flex-start;
+    }
+}
+
+/* ============================================
+   Tlačítka
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-lg);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: var(--color-accent-dark);
+    color: white;
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/* ============================================
+   Sekce: Co je Bukuk
+   ============================================ */
+.features {
+    background-color: white;
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+    .features__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature {
+    text-align: center;
+    padding: var(--space-lg);
+}
+
+.feature__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+}
+
+.feature__icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.feature h3 {
+    font-size: var(--text-2xl);
+}
+
+.feature p {
+    color: var(--color-secondary);
+}
+
+/* ============================================
+   Sekce: Aktuální program (karty)
+   ============================================ */
+.programs__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .programs__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.program-card {
+    background-color: white;
+    padding: var(--space-xl);
+    border-radius: 8px;
+    transition: transform var(--transition);
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+}
+
+.program-card__date {
+    font-size: 0.875rem;
+    color: var(--color-accent-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+}
+
+.program-card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.program-card p {
+    color: var(--color-secondary);
+    margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   Sekce: Pro koho je
+   ============================================ */
+.for-whom {
+    background-color: white;
+}
+
+.for-whom__content {
+    max-width: var(--max-width-text);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.for-whom p {
+    font-size: var(--text-lg);
+    font-style: italic;
+    font-family: var(--font-serif);
+    position: relative;
+    padding-top: var(--space-lg);
+}
+
+.for-whom p::before {
+    content: '"';
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    color: var(--color-accent-dark);
+    opacity: 0.4;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ============================================
+   Sekce: O mně (krátká)
+   ============================================ */
+.about-short {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+    .about-short {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--space-2xl);
+    }
+}
+
+.about-short__photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.about-short__text {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .about-short__text {
+        text-align: left;
+    }
+}
+
+/* ============================================
+   Stránka: Program
+   ============================================ */
+.program-detail {
+    background-color: white;
+    padding: var(--space-2xl);
+    border-radius: 8px;
+    margin-bottom: var(--space-xl);
+}
+
+.program-detail h2 {
+    margin-bottom: var(--space-lg);
+}
+
+/* Harmonogram */
+.timeline {
+    position: relative;
+    padding-left: var(--space-xl);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-secondary);
+}
+
+.timeline__item {
+    position: relative;
+    padding-bottom: var(--space-lg);
+}
+
+.timeline__item::before {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--space-xl) - 4px);
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-accent-dark);
+}
+
+.timeline__week {
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+}
+
+/* Cena */
+.pricing {
+    background-color: var(--color-bg);
+    padding: var(--space-xl);
+    border-radius: 8px;
+    text-align: center;
+    margin: var(--space-xl) 0;
+}
+
+.pricing__price {
+    font-family: var(--font-serif);
+    font-size: var(--text-3xl);
+    color: var(--color-accent-dark);
+    margin: var(--space-md) 0;
+}
+
+.pricing__list {
+    list-style: none;
+    text-align: left;
+    max-width: 400px;
+    margin: var(--space-lg) auto;
+}
+
+.pricing__list li {
+    padding: var(--space-xs) 0;
+    padding-left: var(--space-md);
+    position: relative;
+}
+
+.pricing__list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-dark);
+}
+
+/* ============================================
+   Stránka: Bukuknihovna
+   ============================================ */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.book-card {
+    background-color: white;
+    padding: var(--space-lg);
+    border-radius: 8px;
+}
+
+.book-card h4 {
+    margin-bottom: var(--space-xs);
+}
+
+.book-card__author {
+    color: var(--color-secondary);
+    font-size: 0.9375rem;
+    margin-bottom: var(--space-sm);
+}
+
+/* ============================================
+   Stránka: O mně
+   ============================================ */
+.about-page {
+    max-width: var(--max-width-text);
+    margin: 0 auto;
+}
+
+.about-page__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--space-xl);
+}
+
+.about-page p {
+    margin-bottom: var(--space-lg);
+}
+
+/* ============================================
+   Stránka: Kontakt
+   ============================================ */
+.contact-section {
+    max-width: var(--max-width-text);
+    margin: 0 auto;
+}
+
+.contact-form {
+    background-color: white;
+    padding: var(--space-xl);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    background-color: var(--color-bg);
+    transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-dark);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-info {
+    margin-top: var(--space-xl);
+    text-align: center;
+}
+
+.contact-info a {
+    color: var(--color-accent-dark);
+}
+
+.contact-info a:hover {
+    color: var(--color-accent);
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: white;
+    padding: var(--space-xl);
+    border-radius: 8px;
+    margin-top: var(--space-xl);
+    text-align: center;
+}
+
+.newsletter h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.newsletter p {
+    color: var(--color-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: var(--space-sm);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: var(--space-sm);
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    padding: var(--space-xl) 0 var(--space-md);
+    margin-top: var(--space-3xl);
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+    .footer__inner {
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: left;
+        align-items: center;
+    }
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+    .footer__brand {
+        align-items: flex-start;
+    }
+}
+
+.footer__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    color: var(--color-bg);
+}
+
+.footer__claim {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+.footer__logo {
+    width: 150px;
+    height: auto;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+    .footer__contact {
+        align-items: center;
+    }
+}
+
+.footer__contact a {
+    color: var(--color-bg);
+    opacity: 0.9;
+}
+
+.footer__contact a:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+.footer__legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .footer__legal {
+        align-items: flex-end;
+        text-align: right;
+    }
+}
+
+.footer__legal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer__link {
+    color: var(--color-bg);
+    opacity: 0.8;
+}
+
+.footer__link:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+.footer__author {
+    opacity: 0.7;
+    font-size: 0.8125rem;
+}
+
+.footer__copy {
+    font-size: 0.8125rem;
+    opacity: 0.6;
+    text-align: center;
+    padding-top: var(--space-md);
+}
+
+/* ============================================
+   Utility třídy
+   ============================================ */
+.text-center {
+    text-align: center;
+}
+
+.mt-lg {
+    margin-top: var(--space-lg);
+}
+
+.mb-lg {
+    margin-bottom: var(--space-lg);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+/* Highlight - ruční podtržení */
+.highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.15em;
+    width: 100%;
+    height: 14px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 16' preserveAspectRatio='none'%3E%3Cpath d='M0 14 Q 100 0, 200 12' stroke='%234B6390' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.6'/%3E%3C/svg%3E") no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Doslov (co znamená Bukuk) */
+.epilogue {
+    background-color: white;
+    padding: var(--space-xl);
+    border-radius: 8px;
+    margin-top: var(--space-xl);
+}
+
+.epilogue h3 {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.epilogue p {
+    max-width: var(--max-width-text);
+    margin-left: auto;
+    margin-right: auto;
+}
