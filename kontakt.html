@@ -42,51 +42,33 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero__content">
-                <h1>Napište mi</h1>
-                <p class="hero__subtitle">Máte otázky? Chcete se přihlásit do programu? Ráda se vám ozvu.</p>
+            <div class="hero__inner">
+                <div class="hero__logo">
+                    <img src="img/logo.png" alt="Bukuk logo">
+                </div>
+                <div class="hero__content">
+                    <h1>Napište mi</h1>
+                    <p class="hero__subtitle">Máte otázky? Chcete se přihlásit do programu? Ráda se vám ozvu.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Kontaktní formulář -->
+    <!-- Kontakt -->
     <section>
         <div class="container">
-            <div class="contact-section">
-                <form class="contact-form" action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Jméno</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Předmět</label>
-                        <input type="text" id="subject" name="subject" placeholder="např. Dotaz k programu, Přihláška, Waitlist...">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Zpráva</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Odeslat zprávu</button>
-                </form>
-
-                <div class="contact-info">
-                    <p>Nebo mi napište přímo na<br>
-                    <a href="mailto:info@bukuk.cz">info@bukuk.cz</a></p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <h3>E-mail</h3>
+                    <a href="mailto:email@bukuk.cz" class="contact-card__link">email@bukuk.cz</a>
                 </div>
-
-                <!-- Newsletter -->
-                <div class="newsletter">
-                    <h3>Chcete být v obraze?</h3>
-                    <p>Přihlaste se k odběru novinek. Žádný spam, jen informace o nových termínech a inspirace ke čtení.</p>
-                    <form class="newsletter-form" action="#" method="post">
-                        <input type="email" placeholder="Váš e-mail" required>
-                        <button type="submit" class="btn btn--primary">Přihlásit</button>
-                    </form>
+                <div class="contact-card">
+                    <h3>Telefon</h3>
+                    <a href="tel:+420603887100" class="contact-card__link">603 887 100</a>
                 </div>
+            </div>
+            <div class="contact-author">
+                <p><strong>Jana Střihavková</strong><br>IČO: 22134042</p>
             </div>
         </div>
     </section>
@@ -112,7 +94,7 @@
                 </div>
             </div>
             <div class="footer__copy">
-                &copy; 2025 Bukuk. Všechna práva vyhrazena.
+                &copy; 2026 Bukuk. Všechna práva vyhrazena.
             </div>
         </div>
     </footer>

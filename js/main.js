@@ -72,4 +72,42 @@ document.addEventListener('DOMContentLoaded', function() {
             newsletterForm.reset();
         });
     }
+
+    // Timeline animace
+    const timeline = document.querySelector('.timeline');
+    if (timeline) {
+        const timelineItems = timeline.querySelectorAll('.timeline__item');
+
+        function updateTimeline() {
+            const timelineRect = timeline.getBoundingClientRect();
+            const timelineTop = timelineRect.top;
+            const timelineHeight = timelineRect.height;
+            const windowHeight = window.innerHeight;
+            const triggerPoint = windowHeight * 0.7;
+
+            let progressHeight = 0;
+
+            timelineItems.forEach(function(item, index) {
+                const itemRect = item.getBoundingClientRect();
+                const itemTop = itemRect.top;
+
+                if (itemTop < triggerPoint) {
+                    item.classList.add('active');
+                    progressHeight = item.offsetTop + item.offsetHeight / 2;
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            timeline.style.setProperty('--timeline-progress', progressHeight + 'px');
+        }
+
+        // CSS proměnná pro výšku
+        const style = document.createElement('style');
+        style.textContent = '.timeline::after { height: var(--timeline-progress, 0); }';
+        document.head.appendChild(style);
+
+        window.addEventListener('scroll', updateTimeline);
+        updateTimeline();
+    }
 });
