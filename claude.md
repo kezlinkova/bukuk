@@ -13,9 +13,11 @@ Website for **Bukuk** - a 7-week reading program combining fiction, sharing, and
 |----------|-----|-------|
 | `--color-bg` | `#F2F1EC` | Main background |
 | `--color-primary` | `#4B6390` | Text, headings, footer bg |
-| `--color-secondary` | `#5D6D7E` | Secondary text (improved contrast) |
+| `--color-secondary` | `#5D6D7E` | Secondary text |
 | `--color-accent` | `#CCA26A` | CTA buttons, accents, SVG icons |
 | `--color-accent-dark` | `#841404` | Hover states, highlights, bookmark tab |
+| Footer text | `#FFFDF7` | White text in footer |
+| Footer bottom bar | `#2a4c83` | Blue bar at page end |
 
 ## File Structure
 ```
@@ -24,37 +26,48 @@ bukuk/
 ├── program.html        # Program details, pricing, timeline (class="page-program")
 ├── knihovna.html       # Book recommendations (class="page-knihovna")
 ├── o-mne.html          # About the author
-├── kontakt.html        # Contact cards (email, phone)
+├── kontakt.html        # Contact cards (class="page-kontakt")
 ├── css/
 │   └── style.css       # All styles (CSS custom properties)
 ├── js/
 │   └── main.js         # Mobile menu, smooth scroll, timeline animation
 └── img/
-    ├── logo.png        # Main logo (header 60px, hero 350px, footer 150px)
+    ├── logo.png        # Main logo + favicon
     ├── photo.jpg       # Author photo (280px, no border)
-    ├── icon-book.svg   # Feature icon - open book
+    ├── icon-book.svg   # Feature icon - open book with two pages
     ├── icon-chat.svg   # Feature icon - sharing/conversation
     └── icon-sparkle.svg # Feature icon - self-discovery
 ```
 
+## Navigation
+Menu items (lowercase, except BUKUKnihovna):
+- program
+- BUKUKnihovna
+- o mně
+- kontakt
+
+### Bookmark Effect
+Active menu item has a bookmark tab:
+- Dark red square (#841404) below active link
+- Top corners rounded (8px), bottom corners sharp
+- Size: 28x28px, bottom: -40px
+
 ## Key CSS Classes
-- `.header` - White background, sticky, logo only (60px), border-bottom
+- `.header` - White background, sticky, logo (60px), border-bottom
 - `.hero__inner` - Hero layout (logo left 350px, text right)
 - `.highlight` - Curved underline effect (SVG-based)
 - `.feature__icon` - Centered SVG icons (80px) with light circular bg
 - `.btn--primary` / `.btn--secondary` - Button styles
 - `.program-card` - Program term cards
 - `.timeline` - Week-by-week program timeline with scroll animation
-- `.footer__inner` - 3-column footer grid, logo 150px
 - `.nav__link--active` - Active nav item with bookmark tab effect
 - `.contact-cards` / `.contact-card` - Contact page card layout
-- `.page-program` / `.page-knihovna` - Body classes for reduced section padding
+- `.page-program` / `.page-knihovna` / `.page-kontakt` - Body classes for page-specific styles
 
-## Navigation Bookmark Effect
-Active menu item has a bookmark tab:
-- Dark red square (#841404) below active link
-- Top corners rounded (8px), bottom corners sharp
-- Size: 28x28px, bottom: -40px
+## Page-specific Styles
+- **Program**: Smaller section padding (2rem instead of 8rem)
+- **Knihovna**: Smaller hero bottom padding only
+- **Kontakt**: Smaller hero bottom padding only
 
 ## Timeline Animation
 Program page timeline animates on scroll:
@@ -63,15 +76,15 @@ Program page timeline animates on scroll:
 - Dots scale up and change color when active
 - JavaScript in main.js handles scroll detection
 
-## SVG Icons
-Custom icons for "Co je Bukuk" section:
-- Light circular background (#F5F3ED)
-- Golden stroke icons (#CCA26A)
-- 80x80px display size
+## Footer Structure
+1. **Main footer** (dark blue `#4B6390`):
+   - Logo (150px)
+   - Contact: email@bukuk.cz, 603 887 100 (both clickable)
+   - Legal: GDPR, obchodní podmínky, Jana Střihavková, IČO
 
-## Responsive Breakpoints
-- Mobile: < 768px (single column, hamburger menu)
-- Desktop: >= 768px (multi-column layouts)
+2. **Bottom bar** (blue `#2a4c83`):
+   - Left: © 2026 Jana Střihavková
+   - Right: Webdesign: ukazsewebem.cz (link, opens in new tab)
 
 ## Current Program Dates
 - **Zimní cyklus**: Leden - Březen 2026 (26. ledna – 13. března)
@@ -81,8 +94,12 @@ Custom icons for "Co je Bukuk" section:
 - Email: email@bukuk.cz
 - Phone: 603 887 100
 
+## Responsive Breakpoints
+- Mobile: < 768px (single column, hamburger menu)
+- Desktop: >= 768px (multi-column layouts)
+
 ## Pending Features
-- [ ] Member login section (placeholder button exists)
+- [ ] Member login section
 - [ ] GDPR & Terms pages (links exist, pages not created)
 
 ## Content Owner

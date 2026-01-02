@@ -144,10 +144,20 @@ section {
     padding: var(--space-3xl) 0;
 }
 
-/* Menší padding sekcí na stránkách Program a Knihovna */
-.page-program section,
-.page-knihovna section {
+/* Menší padding sekcí na stránce Program */
+.page-program section {
     padding: var(--space-lg) 0;
+}
+
+/* Menší spodní padding hero na stránkách Knihovna a Kontakt */
+.page-knihovna .hero,
+.page-kontakt .hero {
+    padding-bottom: var(--space-lg);
+}
+
+/* Zajistit velké paddingy pro features sekci na Knihovně */
+.page-knihovna .features {
+    padding: var(--space-3xl) 0;
 }
 
 /* ============================================
@@ -865,8 +875,8 @@ section {
    ============================================ */
 .footer {
     background-color: var(--color-primary);
-    color: var(--color-bg);
-    padding: var(--space-xl) 0 var(--space-md);
+    color: #FFFDF7;
+    padding: var(--space-xl) 0 0;
     margin-top: var(--space-3xl);
 }
 
@@ -876,7 +886,6 @@ section {
     gap: var(--space-lg);
     text-align: center;
     padding-bottom: var(--space-lg);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -905,7 +914,7 @@ section {
     font-family: var(--font-serif);
     font-size: var(--text-xl);
     font-weight: 500;
-    color: var(--color-bg);
+    color: #FFFDF7;
 }
 
 .footer__claim {
@@ -933,13 +942,11 @@ section {
 }
 
 .footer__contact a {
-    color: var(--color-bg);
-    opacity: 0.9;
+    color: #FFFDF7;
 }
 
 .footer__contact a:hover {
     color: var(--color-accent);
-    opacity: 1;
 }
 
 .footer__legal {
@@ -964,13 +971,11 @@ section {
 }
 
 .footer__link {
-    color: var(--color-bg);
-    opacity: 0.8;
+    color: #FFFDF7;
 }
 
 .footer__link:hover {
     color: var(--color-accent);
-    opacity: 1;
 }
 
 .footer__author {
@@ -983,6 +988,31 @@ section {
     opacity: 0.6;
     text-align: center;
     padding-top: var(--space-md);
+}
+
+/* Spodní modrý proužek */
+.footer__bottom {
+    background-color: #2a4c83;
+    color: white;
+    padding: var(--space-sm) 0;
+    margin-top: var(--space-lg);
+    font-size: 0.8125rem;
+}
+
+.footer__bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__bottom a {
+    color: white;
+    opacity: 0.9;
+}
+
+.footer__bottom a:hover {
+    opacity: 1;
+    color: var(--color-accent);
 }
 
 /* ============================================
