@@ -498,13 +498,19 @@ section {
 
 .program-card {
     background-color: white;
-    padding: var(--space-xl);
+    padding: var(--space-md);
     border-radius: 8px;
     transition: transform var(--transition);
 }
 
 .program-card:hover {
     transform: translateY(-4px);
+}
+
+@media (min-width: 768px) {
+    .program-card {
+        padding: var(--space-xl);
+    }
 }
 
 .program-card__date {
@@ -586,11 +592,15 @@ section {
     .testimonials__grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .testimonial {
+        padding: var(--space-lg);
+    }
 }
 
 .testimonial {
     background-color: white;
-    padding: var(--space-lg);
+    padding: var(--space-md);
     border-radius: 8px;
     text-align: center;
 }
@@ -780,8 +790,14 @@ section {
 
 .book-card {
     background-color: white;
-    padding: var(--space-lg);
+    padding: var(--space-md);
     border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .book-card {
+        padding: var(--space-lg);
+    }
 }
 
 .book-card h4 {
@@ -887,11 +903,15 @@ section {
     .contact-cards {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .contact-card {
+        padding: var(--space-xl);
+    }
 }
 
 .contact-card {
     background-color: white;
-    padding: var(--space-xl);
+    padding: var(--space-md);
     border-radius: 8px;
     text-align: center;
 }
