@@ -545,10 +545,16 @@ section {
 
 .for-whom__quote {
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--color-accent-dark);
     opacity: 0.4;
     line-height: 0.5;
+}
+
+@media (min-width: 768px) {
+    .for-whom__quote {
+        font-size: 3rem;
+    }
 }
 
 .for-whom__quote--open {
@@ -628,11 +634,18 @@ section {
 }
 
 .about-short__photo {
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .about-short__photo {
+        width: 280px;
+        height: 280px;
+    }
 }
 
 .about-short__text {
