@@ -23,9 +23,8 @@ Website for **Bukuk** - a 7-week reading program combining fiction, sharing, and
 ```
 bukuk/
 ├── index.html          # Homepage
-├── program.html        # Program details, pricing, timeline (class="page-program")
+├── program.html        # Program details, pricing, timeline, about author (class="page-program")
 ├── knihovna.html       # Book recommendations (class="page-knihovna")
-├── o-mne.html          # About the author
 ├── kontakt.html        # Contact cards (class="page-kontakt")
 ├── css/
 │   └── style.css       # All styles (CSS custom properties)
@@ -43,7 +42,6 @@ bukuk/
 Menu items (lowercase, except BUKUKnihovna):
 - program
 - BUKUKnihovna
-- o mně
 - kontakt
 
 ### Bookmark Effect
@@ -62,6 +60,9 @@ Active menu item has a bookmark tab:
 - `.timeline` - Week-by-week program timeline with scroll animation
 - `.nav__link--active` - Active nav item with bookmark tab effect
 - `.contact-cards` / `.contact-card` - Contact page card layout
+- `.testimonials` / `.testimonial` - Testimonials section (homepage, program)
+- `.about-short` / `.about-short-section` - About author section
+- `.for-whom__quote` - Large decorative quotes
 - `.page-program` / `.page-knihovna` / `.page-kontakt` - Body classes for page-specific styles
 
 ## Page-specific Styles
@@ -80,6 +81,7 @@ Program page timeline animates on scroll:
 1. **Main footer** (dark blue `#4B6390`):
    - Logo (150px)
    - Contact: email@bukuk.cz, 603 887 100 (both clickable)
+   - Social icons: Instagram, Facebook (placeholder links)
    - Legal: GDPR, obchodní podmínky, Jana Střihavková, IČO
 
 2. **Bottom bar** (blue `#2a4c83`):
@@ -93,6 +95,16 @@ Program page timeline animates on scroll:
 ## Contact
 - Email: email@bukuk.cz
 - Phone: 603 887 100
+- Instagram: placeholder (#)
+- Facebook: placeholder (#)
+
+## Billing Info (on contact page)
+- Jana Střihavková
+- IČO: 22134042
+- Sídlo: Pšovlky 119, 270 31 Senomaty
+- Fyzická osoba podnikající podle živnostenského zákona
+- Zapsána u živnostenského úřadu v Rakovníku
+- Zápis do rejstříku: 7. 10. 2024
 
 ## Responsive Breakpoints
 - Mobile: < 768px (single column, hamburger menu)
