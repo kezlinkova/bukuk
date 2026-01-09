@@ -504,7 +504,13 @@ section {
 }
 
 .feature h3 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
+}
+
+@media (min-width: 768px) {
+    .feature h3 {
+        font-size: var(--text-2xl);
+    }
 }
 
 .feature p {
