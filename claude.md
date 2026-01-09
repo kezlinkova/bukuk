@@ -66,9 +66,10 @@ Active menu item has a bookmark tab:
 - `.page-program` / `.page-knihovna` / `.page-kontakt` - Body classes for page-specific styles
 
 ## Page-specific Styles
-- **Program**: Smaller section padding (2rem instead of 8rem)
+- **Program**: About author section with beige bg, larger padding on desktop
 - **Knihovna**: Smaller hero bottom padding only
 - **Kontakt**: Smaller hero bottom padding only
+- **Homepage**: About author section with white bg
 
 ## Timeline Animation
 Program page timeline animates on scroll:
@@ -109,6 +110,31 @@ Program page timeline animates on scroll:
 ## Responsive Breakpoints
 - Mobile: < 768px (single column, hamburger menu)
 - Desktop: >= 768px (multi-column layouts)
+
+## Responsive Design Details
+
+### Typography (mobile → desktop)
+| Element | Mobile | Desktop |
+|---------|--------|---------|
+| h1 | 2.5rem | 3.5rem |
+| h2 | 2rem | 2.5rem |
+| h3 | 1.5rem | 2rem |
+| h4 | 1.25rem | 1.5rem |
+| .feature h3 | 1.5rem | 2rem |
+
+### Spacing (mobile → desktop)
+| Element | Mobile | Desktop |
+|---------|--------|---------|
+| Section padding | 3rem | 8rem |
+| Hero padding | 3rem | 8rem |
+| Hero logo | 180px | 350px |
+| Features grid gap | 0 | 3rem |
+| .program-detail padding | 1.5rem | 5rem |
+| .pricing padding | 1.5rem | 3rem |
+
+### About Section (`.about-short-section`)
+- **Homepage**: white background, text left-aligned on mobile (headings centered)
+- **Program**: beige background, text + h3 left-aligned on mobile, larger padding on desktop
 
 ## Pending Features
 - [ ] Member login section

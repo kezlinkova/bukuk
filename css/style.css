@@ -478,12 +478,13 @@ section {
 .features__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
+    gap: 0;
 }
 
 @media (min-width: 768px) {
     .features__grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-xl);
     }
 }
 
@@ -663,6 +664,22 @@ section {
     background-color: white;
 }
 
+.page-program .about-short-section {
+    background-color: transparent;
+}
+
+@media (max-width: 767px) {
+    .page-program .about-short-section {
+        padding-top: var(--space-sm);
+    }
+}
+
+@media (min-width: 768px) {
+    .page-program .about-short-section {
+        padding: var(--space-3xl) 0;
+    }
+}
+
 .about-short {
     display: flex;
     flex-direction: column;
@@ -698,6 +715,16 @@ section {
     text-align: center;
 }
 
+@media (max-width: 767px) {
+    .about-short__text p {
+        text-align: left;
+    }
+
+    .page-program .about-short__text h3 {
+        text-align: left;
+    }
+}
+
 @media (min-width: 768px) {
     .about-short__text {
         text-align: left;
@@ -709,9 +736,14 @@ section {
    ============================================ */
 .program-detail {
     background-color: white;
-    padding: var(--space-2xl);
+    padding: var(--space-md);
     border-radius: 8px;
-    margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+    .program-detail {
+        padding: var(--space-2xl);
+    }
 }
 
 .program-detail h2 {
@@ -782,10 +814,17 @@ section {
 /* Cena */
 .pricing {
     background-color: var(--color-bg);
-    padding: var(--space-xl);
+    padding: var(--space-md);
     border-radius: 8px;
     text-align: center;
-    margin: var(--space-xl) 0;
+    margin: var(--space-lg) 0;
+}
+
+@media (min-width: 768px) {
+    .pricing {
+        padding: var(--space-xl);
+        margin: var(--space-xl) 0;
+    }
 }
 
 .pricing__price {
