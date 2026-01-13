@@ -841,6 +841,12 @@ section {
     margin: var(--space-lg) auto;
 }
 
+@media (min-width: 768px) {
+    .pricing__list {
+        max-width: 580px;
+    }
+}
+
 .pricing__list li {
     padding: var(--space-xs) 0;
     padding-left: var(--space-md);
@@ -859,8 +865,14 @@ section {
    ============================================ */
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .book-card {

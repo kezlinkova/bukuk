@@ -3,7 +3,9 @@
     "allow": [
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git -C \"E:\\\\1_projects\\\\AI\\\\zkouska\" add .)",
+      "Bash(git -C \"E:\\\\1_projects\\\\AI\\\\zkouska\" commit -m \"$\\(cat <<''EOF''\nAktualizace obsahu webu - termíny, ceny, knihovna\n\n- Změna konce zimního cyklu na 11. března\n- Přidán letní cyklus \\(duben - květen 2026\\)\n- Změna ceny programu na 2 350 Kč\n- Přidání odkazů na přihlašovací formulář \\(Google Forms\\)\n- Aktualizace sekce \"Co znamená Bukuk\"\n- Aktualizace knihovny - nové knihy, 3 sloupce na desktopu\n- Rozšíření pricing__list pro lepší zobrazení na desktopu\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }

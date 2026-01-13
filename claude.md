@@ -67,7 +67,7 @@ Active menu item has a bookmark tab:
 
 ## Page-specific Styles
 - **Program**: About author section with beige bg, larger padding on desktop
-- **Knihovna**: Smaller hero bottom padding only
+- **Knihovna**: Smaller hero bottom padding only, book-grid 3 columns on desktop
 - **Kontakt**: Smaller hero bottom padding only
 - **Homepage**: About author section with white bg
 
@@ -90,8 +90,13 @@ Program page timeline animates on scroll:
    - Right: Webdesign: ukazsewebem.cz (link, opens in new tab)
 
 ## Current Program Dates
-- **Zimní cyklus**: Leden - Březen 2026 (26. ledna – 13. března)
+- **Zimní cyklus**: Leden - Březen 2026 (26. ledna – 11. března)
 - **Jarní cyklus**: Březen - Duben 2026 (23. března – 8. dubna)
+- **Letní cyklus**: Duben - Květen 2026 (datum bude upřesněn)
+
+## Pricing
+- Program price: 2 350 Kč
+- Registration form: https://forms.gle/DsejUywDFfoUujm4A (opens in new tab)
 
 ## Contact
 - Email: email@bukuk.cz
