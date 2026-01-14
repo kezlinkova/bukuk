@@ -98,6 +98,13 @@ Program page timeline animates on scroll:
 - Program price: 2 350 Kč
 - Registration form: https://forms.gle/DsejUywDFfoUujm4A (opens in new tab)
 
+## Co znamená Bukuk (program.html)
+- Bukuk – hravé slovo, různé významy
+- Slovní přesmyčka „book" a „kuk"
+- Buku = indonésky kniha, bukuku = moje kniha
+- Bukubuku = tradiční okinawský čaj, odkaz na filosofii IKIGAI
+- Akronym: Beletrie, Uvolnění, Kreativita, Uvědomění, Koučování
+
 ## Contact
 - Email: email@bukuk.cz
 - Phone: 603 887 100
