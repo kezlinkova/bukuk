@@ -148,9 +148,12 @@ Program page timeline animates on scroll:
 - **Homepage**: white background, text left-aligned on mobile (headings centered)
 - **Program**: beige background, text + h3 left-aligned on mobile, larger padding on desktop
 
+## Legal Documents
+- **GDPR**: https://docs.google.com/document/d/13Q7HcQ8I3Daqk-UkIsdofxr_Q6ilR5suyTHhC-kEQo0/edit?tab=t.0
+- **Obchodní podmínky**: https://docs.google.com/document/d/1ty0viTO6CFTr02zGWp2l0TdwiNxNXuDXWJQja7QTOr0/edit?tab=t.0
+
 ## Pending Features
 - [ ] Member login section
-- [ ] GDPR & Terms pages (links exist, pages not created)
 
 ## Content Owner
 Jana Střihavková, IČO: 22134042
