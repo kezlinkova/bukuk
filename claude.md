@@ -81,7 +81,7 @@ Program page timeline animates on scroll:
 ## Footer Structure
 1. **Main footer** (dark blue `#4B6390`):
    - Logo (150px)
-   - Contact: email@bukuk.cz, 603 887 100 (both clickable)
+   - Contact: mail@bukuk.cz, 603 887 100 (both clickable)
    - Social icons: Instagram, Facebook (placeholder links)
    - Legal: GDPR, obchodní podmínky, Jana Střihavková, IČO
 
@@ -106,7 +106,7 @@ Program page timeline animates on scroll:
 - Akronym: Beletrie, Uvolnění, Kreativita, Uvědomění, Koučování
 
 ## Contact
-- Email: email@bukuk.cz
+- Email: mail@bukuk.cz
 - Phone: 603 887 100
 - Instagram: placeholder (#)
 - Facebook: placeholder (#)
