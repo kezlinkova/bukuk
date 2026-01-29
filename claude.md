@@ -108,8 +108,8 @@ Program page timeline animates on scroll:
 ## Contact
 - Email: mail@bukuk.cz
 - Phone: 603 887 100
-- Instagram: placeholder (#)
-- Facebook: placeholder (#)
+- Instagram: https://www.instagram.com/bukuk.cz
+- Facebook: https://www.facebook.com/profile.php?id=61587041076869
 
 ## Billing Info (on contact page)
 - Jana Střihavková
